@@ -37,7 +37,7 @@ const Edit = () => {
     }
     useEffect(() => {
         loadUserData();
-    }, []) 
+    }) 
 
     const loadUserData = async() => {
        const response =  await getUpdate(id);
