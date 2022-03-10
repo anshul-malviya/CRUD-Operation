@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { editUser,getUpdate, getUsers } from "../Service/api";
+import { editUser,getUpdate } from "../Service/api";
 import { FormGroup, FormControl, InputLabel, Input, Button, Typography, makeStyles } from '@material-ui/core';
 
 const useStyle = makeStyles({
@@ -37,7 +37,7 @@ const Edit = () => {
     }
     useEffect(() => {
         loadUserData();
-    }, []) 
+    }, [loadUserData]) 
 
     const loadUserData = async() => {
        const response =  await getUpdate(id);
